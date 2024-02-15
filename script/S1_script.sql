@@ -47,7 +47,11 @@ SELECT company, AVG(star_rating)
 FROM indeed_analyst_jobs
 WHERE review_count > 5000
 GROUP BY company
---count ?
+--count 
+SELECT COUNT(DISTINCT company)
+FROM indeed_analyst_jobs
+WHERE review_count > 5000
+
 --Q10. Add the code to order the query in #9 from highest to lowest average star rating. Which company with more than 5000 reviews across all location in the datat set has the highest star rating?What is that rating?
 SELECT company, AVG(star_rating)
 FROM indeed_analyst_jobs
